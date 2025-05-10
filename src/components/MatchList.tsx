@@ -39,6 +39,7 @@ const dummyMatches: Record<string, Match[]> = {
   ],
 };
 
+// Primary component
 const MatchList: React.FC = () => {
   const router = useRouter();
   const { slug } = router.query;
@@ -71,13 +72,12 @@ const MatchList: React.FC = () => {
               {match.odds.draw && <span className="px-2 py-1 bg-gray-700 rounded">{match.odds.draw}</span>}
               <span className="px-2 py-1 bg-gray-700 rounded">{match.odds.away}</span>
             </div>
-            <Link href={`/bet/${match.id}`}>
-              <a
-                onClick={(e) => e.stopPropagation()}
-                className="mt-4 inline-block w-full text-center bg-[#25b95f] hover:bg-green-600 text-white py-2 rounded font-semibold transition-colors"
-              >
-                Place Bet
-              </a>
+            <Link
+              href={`/bet/${match.id}`}
+              onClick={(e) => e.stopPropagation()}
+              className="mt-4 inline-block w-full text-center bg-[#25b95f] hover:bg-green-600 text-white py-2 rounded font-semibold transition-colors"
+            >
+              Place Bet
             </Link>
           </div>
         ))}

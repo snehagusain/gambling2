@@ -6,6 +6,12 @@ import AdminUsersList from '@/components/AdminUsersList';
 import AdminMatchOdds from '@/components/AdminMatchOdds';
 import AdminBetStats from '@/components/AdminBetStats';
 import { AdminProvider } from '@/contexts/AdminContext';
+import Head from 'next/head';
+
+export const metadata = {
+  title: 'Admin Dashboard | BetPro',
+  description: 'Admin dashboard for managing the betting platform',
+};
 
 const AdminPage: React.FC = () => {
   const { currentUser } = useAuth();
@@ -13,6 +19,10 @@ const AdminPage: React.FC = () => {
 
   return (
     <AdminProvider>
+      <Head>
+        <title>Admin Dashboard | BetPro</title>
+        <meta name="description" content="Admin dashboard for managing the betting platform" />
+      </Head>
       <div className="min-h-screen bg-[#151921] text-white">
         <AdminContent 
           activeTab={activeTab}
