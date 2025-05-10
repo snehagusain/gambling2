@@ -1,0 +1,10 @@
+/* Custom CSS file to test if styles are loading */
+.test-bg {
+  background-color: blue;
+}
+
+.test-text {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+} 

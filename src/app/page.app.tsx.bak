@@ -1,0 +1,7 @@
+import BettingLayout from '../components/BettingLayout';
+
+export default function Home() {
+  return (
+    <BettingLayout />
+  );
+}

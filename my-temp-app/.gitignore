@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
+.pnp.*
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
@@ -16,8 +16,6 @@
 # next.js
 /.next/
 /out/
-.next
-next.config.js.bak
 
 # production
 /build
@@ -33,39 +31,11 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
-.env*.local
-.env
+.env*
 
 # vercel
 .vercel
-.turbo
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# Firebase
-firebase-debug.log
-ui-debug.log
-firebase-export
-serviceAccountKey.json
-
-# Supabase
-**/supabase/.temp
-**/supabase/.branches
-**/supabase/seed.sql
-
-# Logs
-logs
-*.log
-
-# Migration and backup files
-**/backup/
-**/migrations/backup/
-**/.temp/
-
-# IDE specific files
-.idea
-.vscode
-*.swp
-*.swo

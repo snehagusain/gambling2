@@ -1,0 +1,11 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin paths
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap
+# Update this URL during deployment with your actual domain
+Sitemap: https://your-domain.com/sitemap.xml 
