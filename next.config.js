@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  // Config for dynamic rendering (SSR/ISR)
+  
   // Disable TypeScript type checking during build
   typescript: {
     ignoreBuildErrors: true,
@@ -9,14 +10,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // Remove output: 'export' to enable SSR/ISR
-  // Set the base path if needed
-  // basePath: '',
-  images: {
-    unoptimized: false, // Enable image optimization
-  },
-  distDir: '.next',
-  // exportPathMap has been removed
-}
+};
 
-module.exports = nextConfig 
+module.exports = nextConfig; 
